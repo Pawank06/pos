@@ -1,50 +1,93 @@
-# Welcome to your Expo app 👋
+# Restaurant POS System - Front-End Design
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
 
-1. Install dependencies
+https://github.com/user-attachments/assets/703564f6-f58c-4234-96cf-509e88d9cce9
 
+
+
+## Project Overview
+This repository contains the front-end design for a restaurant POS system and online ordering platform built using React Native. The application focuses on creating a simple and visually appealing order-taking interface, utilizing TailwindCSS for modern and responsive styling. The app allows users to take orders, view menu items, and handle transactions seamlessly.
+## Features
+
+- **Menu Navigation**: Browse categories and select menu items.
+- **Cart Management**: Add items to the cart, update quantities, and review the order.
+- **Order Submission**: User can submit orders.
+- **Responsive UI**: Ensures smooth performance on both iOS and Android devices.
+
+## Tech Stack
+
+- **React Native**: Mobile application framework for building cross-platform apps.
+- **TailwindCSS**: Utility-first CSS framework for styling.
+- **External API**: Using external API for fetching menu items.
+
+## Installation & Setup
+
+1. **Clone and Navigate**:
+   
+   Open a terminal and run the following command to clone the repository to your local machine:
+   
+   ```bash
+   git clone https://github.com/Pawank06/pos-assignment.git
+   ```
+   Navigate to the directory
+   
+   ```bash
+   cd pos-assignment
+   ```
+   
+2. **Install dependencies and run the app**:
+   
+   Open terminal and run the command
+   
    ```bash
    npm install
    ```
 
-2. Start the app
+   Run the app
 
    ```bash
-    npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+3. **Install expo app and scan the QR using your mobile**:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+![qr](https://github.com/user-attachments/assets/bfc06eaf-ca4c-42ca-b605-c529332fdac0)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+4. **Using API key**:
 
-When you're ready, run:
+   ```bash
+   cb6f1bb487f942b58e78017cc89c209e
+   ```
+   Copy and paste the above api key in app/index.tsx
+   
+  ![api](https://github.com/user-attachments/assets/9ca088fc-c045-4f09-988d-da35fd48ec3d)
 
-```bash
-npm run reset-project
-```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## Design Choices for POS System Frontend
 
-To learn more about developing your project with Expo, look at the following resources:
+### 1. Dark Mode
+- The app uses a dark background with bright buttons to make it easy on the eyes. It also gives the app a modern and professional look.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 2. Order List with Status
+- The order list shows the customer’s name, table number, and how many items they ordered. Color-coded labels like "Ready to Serve" (green) and "Waiting" (yellow) help staff quickly see the order status.
 
-## Join the community
+### 3. Easy Menu Navigation
+- There are tabs for **Food** and **Snack** at the top, making it simple to switch between categories. This design is user-friendly and fits well with the dark theme.
 
-Join our community of developers creating universal apps.
+### 4. Clear Menu Cards
+- Each menu item shows a picture, name, calories, rating, and price. The "Add" button is easy to find and use, so staff can quickly add items to the cart.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 5. Action Bar at the Bottom
+- A green button at the bottom shows the total price and allows users to "Proceed Transaction." This makes it easy to complete the order no matter where they are on the page.
+
+---
+
+## Notable Implementations
+
+- **State Management**: Managed the cart and menu item selections using the Context API.
+- **External API Integration**: Used an external API to provide endpoints for retrieving menu items.
+- **Performance Optimization**: Ensured smooth user interactions and minimized load times.
